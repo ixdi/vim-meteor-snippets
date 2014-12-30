@@ -11,11 +11,11 @@ snippet teh
 		${2}
 	});
 snippet eh
-	'${1:selector}': function (e, tmpl) {
+	'${1:selector}': function (e, tpl) {
 		${3}
 	}${2:,}
 snippet ehp
-	'${1:selector}': function (e, tmpl) {
+	'${1:selector}': function (e, tpl) {
 		e.preventDefault();
 		${3}
 	}${2:,}
@@ -94,6 +94,6 @@ snippet methods
 		${1}
 	});
 snippet col
-	${1} = new Mongo.Collection(${2});
+	${1} = new Mongo.Collection('${2}');
 snippet tap
 	TAPi18n.__('${1}');
