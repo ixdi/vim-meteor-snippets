@@ -2,14 +2,24 @@ snippet tmpl
 	<template name="${1}">
 		${2}
 	</template>
-snippet with
+snippet mwith
 	{{#with ${1}}}
 		${2}
 	{{/with}}
-snippet each
+snippet meach
 	{{#each ${1}}}
 		${2}	
 	{{/each}}
+snippet mif
+	{{#if ${1}}}	
+	  ${2}
+	{{/if}}
+snippet mife
+	{{#if ${1}}}	
+	  ${2}
+	  {{else}}
+	  ${3}
+	{{/if}}
 snippet link
 	{{#linkTo "${1}"}}
 		${2}
@@ -20,7 +30,7 @@ snippet group
 	<!---------------------------------------------------------------------------->
 snippet incl
 	{{> ${1}}}
-snippet block
+snippet mblock
 	{{#${1}}}
 		${2}
 	{{/$1}}
