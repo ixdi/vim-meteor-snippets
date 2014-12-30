@@ -1,15 +1,24 @@
-snippet thelpers
+snippet thl
 	Template.${1:template_name}.helpers({
 		${2}
 	});
-snippet te
+snippet teh
 	Template.${1:template_name}.events({
 		${2}
 	});
-snippet ehandler
+snippet eh
 	'${1:selector}': function (e, tmpl) {
 		${3}
 	}${2:,}
+snippet ehp
+	'${1:selector}': function (e, tmpl) {
+		e.preventDefault();
+		${3}
+	}${2:,}
+snippet tauto
+	this.autorun(function (c) {
+		${1}
+	});
 snippet pub
 	Meteor.publish('${1}', function () {
 		${2}
@@ -21,39 +30,42 @@ snippet startup
 		${1}	
 	});
 snippet helper
-	Handlebars.registerHelper('${1}', function (options) {
+	Template.registerHelper('${1}', function (options) {
 		${2}
 	});
-snippet filter
-	function ${1} (context, page) {
-		${2}
-	}
-snippet pages
-	Meteor.pages({
+snippet rbh
+	Router.onBeforeAction(function () {
 		${1}
-	});
-snippet rmap
-	Router.map(function () {
-		${1}
-	});
-snippet rconfig
+	}${2});
+snippet rconf
 	Router.configure({
 		${1}
 	});
-snippet route
+snippet rr
+	Router.route('${1}', {
+		name: '${2}',
+		controller: '${3}'
+	});
+snippet rrd
 	Router.route('${1}', {
 		name: '${2}',
 		controller: '${3}',
-		action: '${4}'
+		waitOn: function () {
+			${4}
+		},
+		data: function () {
+			${5}
+		}
 	});
+snippet rgo
+	Router.go('${1}');
 snippet sset
 	Session.set('${1:key}', ${2:value});
 snippet sget
 	Session.get('${1:key}');
-snippet sequals
+snippet seq
 	Session.equals('${1:key}', ${2:value});
-
-snippet group
+snippet comm
 	/*****************************************************************************/
 	/* ${1} */
 	/*****************************************************************************/
@@ -62,7 +74,7 @@ snippet test
 		${2}
 	});
 snippet auto
-	Deps.autorun(function (c) {
+	Tracker.autorun(function (c) {
 		${1}
 	});
 snippet client
@@ -77,3 +89,9 @@ snippet methods
 	Meteor.methods({
 		${1}
 	});
+snippet col
+	${1} = new Mongo.Collection(${2});
+snippet l
+	{{_ '${1}'}}
+snippet ll
+	{{{_ '${1}'}}}
