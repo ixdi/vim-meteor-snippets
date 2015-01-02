@@ -50,7 +50,7 @@ snippet rr
 		name: '${2}',
 		controller: '${3}'
 	});
-snippet rrd
+snippet rrwd
 	Router.route('${1}', {
 		name: '${2}',
 		controller: '${3}',
@@ -92,6 +92,11 @@ snippet server
 snippet methods
 	Meteor.methods({
 		${1}
+	});
+snippet call
+	Meteor.call('${1}', function (err) {
+		if (err) { ${2} }
+		${3}
 	});
 snippet col
 	${1} = new Mongo.Collection('${2}');
