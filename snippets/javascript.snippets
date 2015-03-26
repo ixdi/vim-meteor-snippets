@@ -2,7 +2,7 @@ snippet thl
 	Template.${1:template_name}.helpers({
 		${2}
 	});
-snippet hf
+snippet thf
 	${1}: function (${2}) {
 		${3}
 	}
@@ -104,3 +104,15 @@ snippet tap
 	TAPi18n.__('${1}');
 snippet serr
 	throw new Meteor.Error('${1}');
+snippet onr
+	Template.${1}.onRender(function() {
+		${2};
+	});
+snippet onc
+	Template.${1}.onCreate(function() {
+		${2};
+	});
+snippet ond
+	Template.${1}.onDestroy(function() {
+		${2};
+	});
