@@ -105,14 +105,14 @@ snippet tap
 snippet serr
 	throw new Meteor.Error('${1}');
 snippet onr
-	Template.${1}.onRender(function() {
+	Template.${1}.onRendered(function() {
 		${2};
 	});
 snippet onc
-	Template.${1}.onCreate(function() {
+	Template.${1}.onCreated(function() {
 		${2};
 	});
 snippet ond
-	Template.${1}.onDestroy(function() {
+	Template.${1}.onDestroyed(function() {
 		${2};
 	});
