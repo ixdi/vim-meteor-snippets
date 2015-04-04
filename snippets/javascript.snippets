@@ -11,14 +11,14 @@ snippet tev
 		${2}
 	});
 snippet es
-	'${1:selector}': function (e, tpl) {
-		${3}
-	}${2:,}
+	'${1}': function (e, tpl) {
+		${2}
+	}
 snippet esp
-	'${1:selector}': function (e, tpl) {
+	'${1}': function (e, tpl) {
 		e.preventDefault();
-		${3}
-	}${2:,}
+		${2}
+	}
 snippet tauto
 	this.autorun(function (c) {
 		${1}
@@ -106,13 +106,13 @@ snippet serr
 	throw new Meteor.Error('${1}');
 snippet onr
 	Template.${1}.onRendered(function() {
-		${2};
+		${2}
 	});
 snippet onc
 	Template.${1}.onCreated(function() {
-		${2};
+		${2}
 	});
 snippet ond
 	Template.${1}.onDestroyed(function() {
-		${2};
+		${2}
 	});
