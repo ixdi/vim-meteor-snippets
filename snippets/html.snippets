@@ -25,9 +25,9 @@ snippet fa
 snippet md
 	<i class="md-${1}"></i>
 snippet pf
-	{{pathFor route='${1}'}}
+	{{pathFor '${1}' ${2}}}
 snippet pfl
-	<a href="{{pathFor route='${1}'}}" class="${2}">${3}</a>
+	<a href="{{pathFor '${1}'}}" class="${2}">${3}</a>
 snippet link
 	{{#linkTo "${1}"}}
 		${2}
