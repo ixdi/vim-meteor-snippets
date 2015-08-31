@@ -46,23 +46,14 @@ snippet rconf
 		${1}
 	});
 snippet rr
-	Router.route('${1}', {
+	FlowRouter.route('${1}', {
 		name: '${2}',
-		controller: '${3}'
-	});
-snippet rrwd
-	Router.route('${1}', {
-		name: '${2}',
-		controller: '${3}',
-		waitOn: function () {
-			${4}
-		},
-		data: function () {
-			${5}
-		}
+		action: function (params, query) {
+                     '${3}'
+                }
 	});
 snippet rgo
-	Router.go('${1}');
+	FlowRouter.go('${1}');
 snippet sset
 	Session.set('${1:key}', ${2:value});
 snippet sget
@@ -96,12 +87,14 @@ snippet methods
 snippet call
 	Meteor.call('${1}', function (err) {
 		if (err) { ${2} }
-		${3}
+		else { 
+                    ${3}
+                }
 	});
 snippet col
 	${1} = new Mongo.Collection('${2}');
 snippet tap
-	TAPi18n.__('${1}');
+	TAPi18n.__('${1}')
 snippet serr
 	throw new Meteor.Error('${1}');
 snippet onr
@@ -116,3 +109,5 @@ snippet ond
 	Template.${1}.onDestroyed(function() {
 		${2}
 	});
+snippet rgp
+        FlowRouter.getParam('${1}')
