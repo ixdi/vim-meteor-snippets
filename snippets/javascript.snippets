@@ -3,7 +3,7 @@ snippet thl
 		${2}
 	});
 snippet thf
-	${1}: function (${2}) {
+	${1}(${2}) {
 		${3}
 	}
 snippet tev
@@ -11,18 +11,22 @@ snippet tev
 		${2}
 	});
 snippet es
-	'${1}': function (e, tpl) {
+	'${1}'(e, tpl) {
 		${2}
 	}
 snippet esp
-	'${1}': function (e, tpl) {
+	'${1}'(e, tpl) {
 		e.preventDefault();
 		${2}
 	}
 snippet tauto
-	this.autorun(function (c) {
+	this.autorun((c) => {
 		${1}
 	});
+snippet tfunc
+	this.${1} = (${2}) => {
+		${3}
+	};
 snippet pub
 	Meteor.publish('${1}', function () {
 		${2}
@@ -33,17 +37,9 @@ snippet startup
 	Meteor.startup(function () {
 		${1}	
 	});
-snippet helper
-	Template.registerHelper('${1}', function (options) {
-		${2}
-	});
-snippet rbh
-	Router.onBeforeAction(function () {
-		${1}
-	}${2});
-snippet rconf
-	Router.configure({
-		${1}
+snippet ghl
+	Template.registerHelper('${1}', (${2}) => {
+		${3}
 	});
 snippet rr
 	FlowRouter.route('${1}', {
@@ -64,12 +60,8 @@ snippet comm
 	/*****************************************************************************/
 	/* ${1} */
 	/*****************************************************************************/
-snippet test
-	Tinytest.add('${1}', function (test) {
-		${2}
-	});
 snippet auto
-	Tracker.autorun(function (c) {
+	Tracker.autorun((c) => {
 		${1}
 	});
 snippet client
@@ -84,6 +76,21 @@ snippet methods
 	Meteor.methods({
 		${1}
 	});
+snippet am
+	${1} = {
+		name: '${2}',
+		validate(args) {
+			new SimpleSchema({
+				${3}
+			}).validate(args)
+		},
+		run({ ${4} }) {
+			${5}
+		},
+		call(args, callback) {
+			
+		}
+	}
 snippet call
 	Meteor.call('${1}', function (err) {
 		if (err) { ${2} }
