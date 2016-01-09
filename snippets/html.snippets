@@ -10,34 +10,56 @@ snippet meach
 	{{#each ${1}}}
 		${2}	
 	{{/each}}
+snippet meache
+	{{#each ${1}}}
+		${2}
+	{{else}}
+		${3}
+	{{/each}}
+snippet meachi
+	{{#each ${1} in ${2}}}
+		${3}	
+	{{/each}}
+snippet meachei
+	{{#each ${1} in ${2}}}
+		${3}
+	{{else}}
+		${4}
+	{{/each}}
 snippet mif
 	{{#if ${1}}}	
-	  ${2}
+	  	${2}
 	{{/if}}
 snippet mife
 	{{#if ${1}}}	
-	  ${2}
-	  {{else}}
-	  ${3}
+		${2}
+	{{else}}
+	 	${3}
 	{{/if}}
-snippet fa
-	<i class="fa fa-${1}"></i>
+snippet munless
+	{{#unless ${1}}}	
+	 	${2}
+	{{/unless}}
+snippet munlesse
+	{{#unless ${1}}}	
+	 	${2}
+	{{else}}
+	 	${3}
+	{{/unless}}
 snippet md
 	<i class="md-${1}"></i>
 snippet pf
 	{{pathFor '${1}' ${2}}}
-snippet pfl
+snippet apf
 	<a href="{{pathFor '${1}'}}" class="${2}">${3}</a>
-snippet link
-	{{#linkTo "${1}"}}
-		${2}
-	{{/linkTo}}
 snippet group
 	<!---------------------------------------------------------------------------->
 	<!-- ${1} -->
 	<!---------------------------------------------------------------------------->
 snippet tinc
 	{{> ${1}}}
+snippet tdyn
+	{{> Template.dynamic template=${1} data=${2}}}
 snippet mblock
 	{{#${1}}}
 		${2}
