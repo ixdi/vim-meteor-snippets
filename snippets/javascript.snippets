@@ -2,7 +2,7 @@ snippet thl
 	Template.${1:template_name}.helpers({
 		${2}
 	});
-snippet thf
+snippet thlf
 	${1}(${2}) {
 		${3}
 	}
@@ -10,7 +10,7 @@ snippet tev
 	Template.${1:template_name}.events({
 		${2}
 	});
-snippet es
+snippet tevf
 	'${1}'(e, tpl) {
 		${2}
 	}
@@ -44,18 +44,20 @@ snippet ghl
 snippet rr
 	FlowRouter.route('${1}', {
 		name: '${2}',
-		action: function (params, query) {
+		action(params, query) {
                      '${3}'
                 }
 	});
 snippet rgo
 	FlowRouter.go('${1}');
+snippet rgp
+        FlowRouter.getParam('${1}');
 snippet sset
-	Session.set('${1:key}', ${2:value});
+	Session.set('${2:key}', ${3:value})${1}
 snippet sget
-	Session.get('${1:key}');
+	Session.get('${2:key}')${1}
 snippet seq
-	Session.equals('${1:key}', ${2:value});
+	Session.equals('${2:key}', ${3:value})${1}
 snippet comm
 	/*****************************************************************************/
 	/* ${1} */
@@ -72,27 +74,26 @@ snippet server
 	if (Meteor.isServer) {
 		${1}
 	}
-snippet methods
+snippet mtd
 	Meteor.methods({
-		${1}
 	});
-snippet am
-	${1} = {
+snippet mtdf
+	[${1}]: function (args) {
+		${2}.validate.call(this, args);
+		${2}.run.call(this, args);
+	}
+snippet mtda
+	${1} = new ValidatedMethod({
 		name: '${2}',
-		validate(args) {
-			new SimpleSchema({
-				${3}
-			}).validate(args)
-		},
+		validate: new SimpleSchema({
+			${3}
+		}).validator(),
 		run({ ${4} }) {
 			${5}
-		},
-		call(args, callback) {
-			
 		}
-	}
+	});
 snippet call
-	Meteor.call('${1}', function (err) {
+	Meteor.call('${1}', (err) => {
 		if (err) { ${2} }
 		else { 
                     ${3}
@@ -116,5 +117,3 @@ snippet ond
 	Template.${1}.onDestroyed(function() {
 		${2}
 	});
-snippet rgp
-        FlowRouter.getParam('${1}')
