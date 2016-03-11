@@ -5,7 +5,7 @@ snippet thl
 snippet thlf
 	${1}(${2}) {
 		${3}
-	}
+	};
 snippet tev
 	Template.${1:template_name}.events({
 		${2}
@@ -13,12 +13,12 @@ snippet tev
 snippet tevf
 	'${1}'(e, tpl) {
 		${2}
-	}
+	};
 snippet esp
 	'${1}'(e, tpl) {
 		e.preventDefault();
 		${2}
-	}
+	};
 snippet tauto
 	this.autorun((c) => {
 		${1}
@@ -35,23 +35,23 @@ snippet sub
 	Meteor.subscribe('${1}');
 snippet startup
 	Meteor.startup(function () {
-		${1}	
+		${1}
 	});
 snippet ghl
 	Template.registerHelper('${1}', (${2}) => {
 		${3}
 	});
 snippet rr
-	FlowRouter.route('${1}', {
-		name: '${2}',
-		action(params, query) {
-                     '${3}'
-                }
-	});
+		FlowRouter.route('${1}', {
+				name: '${2}',
+				action(params, query) {
+						'${3}'
+				}
+		});
 snippet rgo
 	FlowRouter.go('${1}');
 snippet rgp
-        FlowRouter.getParam('${1}');
+  FlowRouter.getParam('${1}');
 snippet sset
 	Session.set('${2:key}', ${3:value})${1}
 snippet sget
@@ -95,9 +95,9 @@ snippet mtda
 snippet call
 	Meteor.call('${1}', (err) => {
 		if (err) { ${2} }
-		else { 
-                    ${3}
-                }
+		else {
+				${3}
+	  }
 	});
 snippet col
 	${1} = new Mongo.Collection('${2}');
