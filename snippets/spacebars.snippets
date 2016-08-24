@@ -10,21 +10,9 @@ snippet meach
 	{{#each ${1}}}
 		${2}	
 	{{/each}}
-snippet meache
-	{{#each ${1}}}
-		${2}
-	{{else}}
-		${3}
-	{{/each}}
 snippet meachi
 	{{#each ${1} in ${2}}}
 		${3}	
-	{{/each}}
-snippet meachei
-	{{#each ${1} in ${2}}}
-		${3}
-	{{else}}
-		${4}
 	{{/each}}
 snippet mif
 	{{#if ${1}}}	
@@ -36,11 +24,11 @@ snippet mife
 	{{else}}
 	 	${3}
 	{{/if}}
-snippet munless
+snippet mun
 	{{#unless ${1}}}	
 	 	${2}
 	{{/unless}}
-snippet munlesse
+snippet mune
 	{{#unless ${1}}}	
 	 	${2}
 	{{else}}
@@ -52,10 +40,8 @@ snippet pf
 	{{pathFor '${1}' ${2}}}
 snippet apf
 	<a href="{{pathFor '${1}'}}" class="${2}">${3}</a>
-snippet group
-	<!---------------------------------------------------------------------------->
+snippet comm
 	<!-- ${1} -->
-	<!---------------------------------------------------------------------------->
 snippet tinc
 	{{> ${1}}}
 snippet tdyn
@@ -63,7 +49,7 @@ snippet tdyn
 snippet mblock
 	{{#${1}}}
 		${2}
-	{{/$1}}
+	{{/${1}}}
 snippet l
 	{{_ '${1}'}}
 snippet ll
