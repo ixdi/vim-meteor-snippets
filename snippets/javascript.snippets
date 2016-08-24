@@ -2,7 +2,7 @@ snippet thl
 	Template.${1:template_name}.helpers({
 		${2}
 	});
-snippet thlf
+snippet hf
 	${1}(${2}) {
 		${3}
 	};
@@ -10,21 +10,22 @@ snippet tev
 	Template.${1:template_name}.events({
 		${2}
 	});
-snippet tevf
-	'${1}'(e, tpl) {
-		${2}
-	};
-snippet esp
+snippet ef
 	'${1}'(e, tpl) {
 		e.preventDefault();
 		${2}
 	};
+snippet efd
+	'${1}': _.debounce((e, tpl) => {
+		e.preventDefault();
+		${2}
+	}, App.Settings.limitEventTime, true)${3}
 snippet tauto
-	this.autorun((c) => {
+	self.autorun((c) => {
 		${1}
 	});
 snippet tfunc
-	this.${1} = (${2}) => {
+	self.${1} = (${2}) => {
 		${3}
 	};
 snippet pub
@@ -32,7 +33,7 @@ snippet pub
 		${2}
 	});
 snippet sub
-	Meteor.subscribe('${1}');
+	${1}.subscribe('${2}'${3});
 snippet startup
 	Meteor.startup(function () {
 		${1}
@@ -74,15 +75,15 @@ snippet server
 	if (Meteor.isServer) {
 		${1}
 	}
-snippet mtd
+snippet mt
 	Meteor.methods({
 	});
-snippet mtdf
+snippet mtf
 	[${1}]: function (args) {
 		${2}.validate.call(this, args);
 		${2}.run.call(this, args);
 	}
-snippet mtda
+snippet mta
 	${1} = new ValidatedMethod({
 		name: '${2}',
 		validate: new SimpleSchema({
@@ -92,7 +93,7 @@ snippet mtda
 			${5}
 		}
 	});
-snippet call
+snippet mcall
 	Meteor.call('${1}', (err) => {
 		if (err) { ${2} }
 		else {
