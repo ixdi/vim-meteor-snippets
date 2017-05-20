@@ -108,15 +108,18 @@ snippet serr
 	throw new Meteor.Error('${1}');
 snippet onr
 	Template.${1}.onRendered(function() {
-		${2}
+	  const self = this;
+	  ${2}
 	});
 snippet onc
 	Template.${1}.onCreated(function() {
-		${2}
+	  const self = this;
+	  ${2}
 	});
 snippet ond
 	Template.${1}.onDestroyed(function() {
-		${2}
+	  const self = this;
+	  ${2}
 	});
 snippet imp 
 	import { ${1} } from '${2}';
