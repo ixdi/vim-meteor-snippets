@@ -1,3 +1,5 @@
+snipet imd
+	<i class='md-${1}'></i>
 snippet tmpl
 	<template name="${1}">
 		${2}
@@ -106,54 +108,9 @@ snippet esc
 # comment
 snippet //
 	<!-- ${1} -->${0}
-# Generic Doctype
-snippet doctype HTML 4.01 Strict
-	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-	"http://www.w3.org/TR/html4/strict.dtd">
-snippet doctype HTML 4.01 Transitional
-	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-	"http://www.w3.org/TR/html4/loose.dtd">
-snippet doctype HTML 5
-	<!DOCTYPE HTML>
-snippet doctype XHTML 1.0 Frameset
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-snippet doctype XHTML 1.0 Strict
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-snippet doctype XHTML 1.0 Transitional
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-snippet doctype XHTML 1.1
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-# HTML Doctype 4.01 Strict
-snippet docts
-	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-	"http://www.w3.org/TR/html4/strict.dtd">
-# HTML Doctype 4.01 Transitional
-snippet doct
-	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-	"http://www.w3.org/TR/html4/loose.dtd">
 # HTML Doctype 5
 snippet doct5
 	<!DOCTYPE HTML>
-# XHTML Doctype 1.0 Frameset
-snippet docxf
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
-# XHTML Doctype 1.0 Strict
-snippet docxs
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-# XHTML Doctype 1.0 Transitional
-snippet docxt
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-# XHTML Doctype 1.1
-snippet docx
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 # Attributes
 snippet attr
 	${1:attribute}="${0:property}"
@@ -204,29 +161,8 @@ snippet a#
 	<a id="${1}" href="${2:#}">${0:$1}</a>
 snippet a:ext
 	<a href="http://${1:example.com}">${0:$1}</a>
-snippet a:mail
-	<a href="mailto:${1:joe@example.com}?subject=${2:feedback}">${0:email me}</a>
-snippet ac
-	<a href="`@+`">${0:`@+`}</a>
 snippet abbr
 	<abbr title="${1}">${0}</abbr>
-snippet address
-	<address>
-		${0}
-	</address>
-snippet area
-	<area shape="${1:rect}" coords="${2}" href="${3}" alt="${0}" />
-snippet area+
-	<area shape="${1:rect}" coords="${2}" href="${3}" alt="${4}" />
-	area+
-snippet area:c
-	<area shape="circle" coords="${1}" href="${2}" alt="${0}" />
-snippet area:d
-	<area shape="default" coords="${1}" href="${2}" alt="${0}" />
-snippet area:p
-	<area shape="poly" coords="${1}" href="${2}" alt="${0}" />
-snippet area:r
-	<area shape="rect" coords="${1}" href="${2}" alt="${0}" />
 snippet article
 	<article>
 		${0}
@@ -255,16 +191,6 @@ snippet audio
 	<audio src="${1}>${0}</audio>
 snippet b
 	<b>${0}</b>
-snippet base
-	<base href="${1}" target="${0}" />
-snippet bdi
-	<bdi>${0}</bdo>
-snippet bdo
-	<bdo dir="${1}">${0}</bdo>
-snippet bdo:l
-	<bdo dir="ltr">${0}</bdo>
-snippet bdo:r
-	<bdo dir="rtl">${0}</bdo>
 snippet blockquote
 	<blockquote>
 		${0}
@@ -293,56 +219,6 @@ snippet caption
 	<caption>${0}</caption>
 snippet cite
 	<cite>${0}</cite>
-snippet code
-	<code>${0}</code>
-snippet col
-	<col />
-snippet col+
-	<col />
-	col+
-snippet colgroup
-	<colgroup>
-		${0}
-	</colgroup>
-snippet colgroup+
-	<colgroup>
-		<col />
-		col+${0}
-	</colgroup>
-snippet command
-	<command type="command" label="${1}" icon="${0}">
-snippet command:c
-	<command type="checkbox" label="${1}" icon="${0}">
-snippet command:r
-	<command type="radio" radiogroup="${1}" label="${2}" icon="${0}">
-snippet datagrid
-	<datagrid>
-		${0}
-	</datagrid>
-snippet datalist
-	<datalist>
-		${0}
-	</datalist>
-snippet datatemplate
-	<datatemplate>
-		${0}
-	</datatemplate>
-snippet dd
-	<dd>${0}</dd>
-snippet dd.
-	<dd class="${1}">${0}</dd>
-snippet dd#
-	<dd id="${1}">${0}</dd>
-snippet del
-	<del>${0}</del>
-snippet details
-	<details>${0}</details>
-snippet dfn
-	<dfn>${0}</dfn>
-snippet dialog
-	<dialog>
-		${0}
-	</dialog>
 snippet div
 	<div>
 		${0}
@@ -506,14 +382,6 @@ snippet hgroup.
 	</hgroup>
 snippet hr
 	<hr />
-snippet html
-	<html>
-	${0}
-	</html>
-snippet xhtml
-	<html xmlns="http://www.w3.org/1999/xhtml">
-	${0}
-	</html>
 snippet html5
 	<!DOCTYPE html>
 	<html>
