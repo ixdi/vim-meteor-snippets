@@ -43,12 +43,12 @@ snippet ghl
 		${3}
 	});
 snippet rr
-		FlowRouter.route('${1}', {
-				name: '${2}',
-				action(params, query) {
-						'${3}'
-				}
-		});
+	FlowRouter.route('${1}', {
+		name: '${2}',
+		action(params, query) {
+			'${3}'
+		}
+	});
 snippet rgo
 	FlowRouter.go('${1}');
 snippet rgp
@@ -67,11 +67,11 @@ snippet auto
 	Tracker.autorun((c) => {
 		${1}
 	});
-snippet client
+snippet isclient
 	if (Meteor.isClient) {
 		${1}
 	}
-snippet server
+snippet isserver
 	if (Meteor.isServer) {
 		${1}
 	}
