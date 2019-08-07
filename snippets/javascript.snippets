@@ -90,7 +90,7 @@ snippet mcall
 	});
 snippet mcol
 	${1} = new Mongo.Collection('${2}');
-snippet mtap
+snippet mi18
 	i18n.__('${1}')
 snippet merr
 	throw new Meteor.Error('${1}');
@@ -116,55 +116,55 @@ snippet mimd
 snippet mimh
 	import { ${1} } from '/imports/startup/client/hlp-cli-common.js';
 
-# Some useful Unicode entities
-# Non-Breaking Space
-snippet nbs
-	&nbsp;
-# ←
-snippet left
-	&#x2190;
-# →
-snippet right
-	&#x2192;
-# ↑
-snippet up
-	&#x2191;
-# ↓
-snippet down
-	&#x2193;
-# ↩
-snippet return
-	&#x21A9;
-# ⇤
-snippet backtab
-	&#x21E4;
-# ⇥
-snippet tab
-	&#x21E5;
-# ⇧
-snippet shift
-	&#x21E7;
-# ⌃
-snippet ctrl
-	&#x2303;
-# ⌅
-snippet enter
-	&#x2305;
-# ⌘
-snippet cmd
-	&#x2318;
-# ⌥
-snippet option
-	&#x2325;
-# ⌦
-snippet delete
-	&#x2326;
-# ⌫
-snippet backspace
-	&#x232B;
-# ⎋
-snippet esc
-	&#x238B;
-# comment
-snippet //
-	<!-- ${0} -->
+# For of loop
+snippet forof
+	for (let ${1:s} of ${2:sequence}) {
+		${3}
+	}
+
+# Import
+snippet im
+	import ${1:foo} from '${2:bar}'
+
+# Export
+snippet ex
+	export ${1:default} ${2:bar}
+
+snippet ce
+	console.error(${1:obj})
+
+snippet cl
+	console.log(${1:obj})
+
+snippet foreach
+	${1:array}.forEach((${2:item}) => {
+		${0}
+	})
+snippet forof
+	for (let ${1:elem} of ${2:obj}) {
+		${0}
+	}
+
+snippet for
+	for (let i = 0 i < ${1:length} i++) {
+		${0}
+	}
+snippet if
+	if (${1:condition}) {
+		${0}
+	}
+snippet ife
+	if (${1:condition}) {
+		${2}
+	} else {
+		${0}
+	}
+  
+snippet ifei
+	if (${1:condition}) {
+		${2}
+	} else if (${3:condition}) {
+		${0}
+	}
+snippet =>
+	(${1}) => ${2}
