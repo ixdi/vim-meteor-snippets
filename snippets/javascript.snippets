@@ -12,13 +12,13 @@ snippet mte
 		${2}
 	});
 snippet mef
-	'${1}'(e, tpl) {
+	'${1}'(ev, tpl) {
 		e.preventDefault();
 		${2}
 	};
 snippet mefd
-	'${1}': _.debounce((e, tpl) => {
-		e.preventDefault();
+	'${1}': _.debounce((ev, tpl) => {
+		ev.preventDefault();
 		${2}
 	}, App.Settings.limitEventTime, true)${3}
 snippet mtauto
@@ -121,23 +121,16 @@ snippet forof
 	for (let ${1:s} of ${2:sequence}) {
 		${3}
 	}
-
-# Import
 snippet im
 	import ${1:foo} from '${2:bar}'
-
-# Export
 snippet ex
 	export ${1:default} ${2:bar}
-
 snippet ce
 	console.error(${1:obj})
-
 snippet cl
 	console.log(${1:obj})
 snippet cle
 	console.log(${1:obj},${2})
-
 snippet foreach
 	${1:array}.forEach((${2:item}) => {
 		${0}
@@ -146,7 +139,6 @@ snippet forof
 	for (let ${1:elem} of ${2:obj}) {
 		${0}
 	}
-
 snippet for
 	for (let i = 0 i < ${1:length} i++) {
 		${0}
@@ -161,7 +153,6 @@ snippet ife
 	} else {
 		${0}
 	}
-  
 snippet ifei
 	if (${1:condition}) {
 		${2}
