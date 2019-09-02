@@ -1,40 +1,40 @@
 snippet tmpl
 <template name="${1}">
-${2}
+  ${2}
 </template>
 snippet mwith
 {{#with ${1}}}
-${2}
+  ${2}
 {{/with}}
 snippet meach
 {{#each ${1} in ${2}}}
-${3}
+  ${3}
 {{/each}}
 snippet mif
 {{#if ${1}}}
-${2}
+  ${2}
 {{/if}}
 snippet mife
 {{#if ${1}}}
-${2}
+  ${2}
 {{else}}
-${3}
+  ${3}
 {{/if}}
 snippet mifei
 {{#if ${1}}}
-${3}
+  ${3}
 {{else if ${2}}}
-${4}
+  ${4}
 {{/if}}
 snippet mun
 {{#unless ${1}}}
-${2}
+  ${2}
 {{/unless}}
 snippet mune
 {{#unless ${1}}}
-${2}
+  ${2}
 {{else}}
-${3}
+  ${3}
 {{/unless}}
 snippet mi
 <i class="material-icons ${1}">${2}</i>
@@ -50,43 +50,25 @@ snippet mtd
 {{> Template.dynamic template=${1} data=${2}}}
 snippet mblock
 {{#${1}}}
-${2}
+  ${2}
 {{/${1}}}
-snippet l
+snippet ml
 {{_ '${1}'}}
-snippet ll
+snippet mll
 {{{_ '${1}'}}}
 snippet nbs
 &nbsp;
 snippet //
 <!-- ${0} -->
-snippet docts
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
-snippet doct
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
 snippet doct5
 <!DOCTYPE HTML>
-snippet docxf
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
-snippet docxs
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-snippet docxt
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-snippet docx
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 snippet attr
 ${1:attribute}="${0:property}"
 snippet attr+
-${1:attribute}="${2:property}" attr+
-snippet .
+${1:attribute}="${2:property}"
+snippet cls
 class="${1}"
-snippet #
+snippet id
 id="${1}"
 snippet alt
 alt="${1}"
@@ -143,7 +125,6 @@ snippet area
 <area shape="${1:rect}" coords="${2}" href="${3}" alt="${0}">
 snippet area+
 <area shape="${1:rect}" coords="${2}" href="${3}" alt="${4}">
-area+
 snippet area:c
 <area shape="circle" coords="${1}" href="${2}" alt="${0}">
 snippet area:d
@@ -154,27 +135,27 @@ snippet area:r
 <area shape="rect" coords="${1}" href="${2}" alt="${0}">
 snippet article
 <article>
-${0}
+  ${0}
 </article>
 snippet article.
 <article class="${1}">
-${0}
+  ${0}
 </article>
 snippet article#
 <article id="${1}">
-${0}
+  ${0}
 </article>
 snippet aside
 <aside>
-${0}
+  ${0}
 </aside>
 snippet aside.
 <aside class="${1}">
-${0}
+  ${0}
 </aside>
 snippet aside#
 <aside id="${1}">
-${0}
+  ${0}
 </aside>
 snippet audio
 <audio src="${1}>${0}</audio>
@@ -192,27 +173,27 @@ snippet bdo:r
 <bdo dir="rtl">${0}</bdo>
 snippet blockquote
 <blockquote>
-${0}
+  ${0}
 </blockquote>
 snippet body
 <body>
-${0}
+  ${0}
 </body>
 snippet br
 <br>
-snippet button
+snippet btn
 <button type="${1:submit}">${0}</button>
-snippet button.
+snippet btn.
 <button class="${1:button}" type="${2:submit}">${0}</button>
-snippet button#
+snippet btn#
 <button id="${1}" type="${2:submit}">${0}</button>
-snippet button:s
+snippet btn:s
 <button type="submit">${0}</button>
-snippet button:r
+snippet btn:r
 <button type="reset">${0}</button>
 snippet canvas
 <canvas>
-${0}
+  ${0}
 </canvas>
 snippet caption
 <caption>${0}</caption>
@@ -224,12 +205,11 @@ snippet col
 <col>
 snippet colgroup
 <colgroup>
-${0}
+  ${0}
 </colgroup>
 snippet colgroup+
 <colgroup>
-<col>
-col+${0}
+  ${0}
 </colgroup>
 snippet command
 <command type="command" label="${1}" icon="${0}">
@@ -239,15 +219,15 @@ snippet command:r
 <command type="radio" radiogroup="${1}" label="${2}" icon="${0}">
 snippet datagrid
 <datagrid>
-${0}
+  ${0}
 </datagrid>
 snippet datalist
 <datalist>
-${0}
+  ${0}
 </datalist>
 snippet datatemplate
 <datatemplate>
-${0}
+  ${0}
 </datatemplate>
 snippet dd
 <dd>${0}</dd>
@@ -263,37 +243,36 @@ snippet dfn
 <dfn>${0}</dfn>
 snippet dialog
 <dialog>
-${0}
+  ${0}
 </dialog>
 snippet div
 <div>
-${0}
+  ${0}
 </div>
 snippet div.
 <div class="${1}">
-${0}
+  ${0}
 </div>
 snippet div#
 <div id="${1}">
-${0}
+  ${0}
 </div>
 snippet dl
 <dl>
-${0}
+  ${0}
 </dl>
 snippet dl.
 <dl class="${1}">
-${0}
+  ${0}
 </dl>
 snippet dl#
 <dl id="${1}">
-${0}
+  ${0}
 </dl>
 snippet dl+
 <dl>
-<dt>${1}</dt>
-<dd>${2}</dd>
-dt+${0}
+  <dt>${1}</dt>
+  <dd>${2}</dd>
 </dl>
 snippet dt
 <dt>${0}</dt>
@@ -304,27 +283,26 @@ snippet dt#
 snippet dt+
 <dt>${1}</dt>
 <dd>${2}</dd>
-dt+${0}
 snippet em
 <em>${0}</em>
 snippet embed
 <embed src="${1}" type="${0}">
 snippet fieldset
 <fieldset>
-${0}
+  ${0}
 </fieldset>
 snippet fieldset.
 <fieldset class="${1}">
-${0}
+  ${0}
 </fieldset>
 snippet fieldset#
 <fieldset id="${1}">
-${0}
+  ${0}
 </fieldset>
 snippet fieldset+
 <fieldset>
 <legend><span>${1}</span></legend>
-${2}
+  ${2}
 </fieldset>
 fieldset+${0}
 snippet figcaption
@@ -333,35 +311,35 @@ snippet figure
 <figure>${0}</figure>
 snippet figure#
 <figure id="${1}">
-${0}
+  ${0}
 </figure>
 snippet figure.
 <figure class="${1}">
-${0}
+  ${0}
 </figure>
 snippet footer
 <footer>
-${0}
+  ${0}
 </footer>
 snippet footer.
 <footer class="${1}">
-${0}
+  ${0}
 </footer>
 snippet footer#
 <footer id="${1}">
-${0}
+  ${0}
 </footer>
 snippet form
 <form action="${1}" method="${2:post}">
-${0}
+  ${0}
 </form>
 snippet form.
 <form class="${1}" action="${2}" method="${3:post}">
-${0}
+  ${0}
 </form>
 snippet form#
 <form id="${1}" action="${2}" method="${3:post}">
-${0}
+  ${0}
 </form>
 snippet h1
 <h1>${0}</h1>
@@ -401,69 +379,57 @@ snippet h6#
 <h6 id="${1}">${0}</h6>
 snippet head
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-<title>${1:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
-${0}
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>${1:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
+  ${0}
 </head>
 snippet header
 <header>
-${0}
+  ${0}
 </header>
 snippet header.
 <header class="${1}">
-${0}
+  ${0}
 </header>
 snippet header#
 <header id="${1}">
-${0}
+  ${0}
 </header>
 snippet hgroup
 <hgroup>
-${0}
+  ${0}
 </hgroup>
 snippet hgroup.
 <hgroup class="${1}>
-${0}
+  ${0}
 </hgroup>
 snippet hr
 <hr>
 snippet html
 <html>
-${0}
+  ${0}
 </html>
 snippet xhtml
 <html xmlns="http://www.w3.org/1999/xhtml">
-${0}
+  ${0}
 </html>
 snippet html5
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<title>${1:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
-${2:link}
-</head>
-<body>
-${0:body}
-</body>
-</html>
-snippet html5l
-<!DOCTYPE html>
-<html lang="${1:es}">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<title>${2:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
-${3:link}
-</head>
-<body>
-${0:body}
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>${1:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
+    ${2:link}
+  </head>
+  <body>
+    ${0:body}
+  </body>
 </html>
 snippet i
 <i>${0}</i>
+snippet m
+<i class="material-icons">${0}</i>
 snippet iframe
 <iframe src="${1}" frameborder="0"></iframe>
 snippet iframe.
