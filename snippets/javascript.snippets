@@ -1,54 +1,54 @@
 # Meteor snippets
 snippet mth
 Template.${1:template_name}.helpers({
-${2}
+  ${2}
 });
 snippet mhf
 ${1}(${2}) {
-${3}
-};
+  ${3}
+},
 snippet mte
 Template.${1:template_name}.events({
-${2}
+  ${2}
 });
 snippet mef
 '${1}'(ev, tpl) {
-e.preventDefault();
-${2}
-};
+  ev.preventDefault();
+  ${2}
+},
 snippet mefd
 '${1}': _.debounce((ev, tpl) => {
-ev.preventDefault();
-${2}
+  ev.preventDefault();
+  ${2}
 }, App.Settings.limitEventTime, true),
 snippet mtauto
 self.autorun((c) => {
-${1}
+  ${1}
 });
 snippet mtf
 self.${1} = (${2}) => {
-${3}
+  ${3}
 };
 snippet mpub
 Meteor.publish('${1}', function () {
-${2}
+  ${2}
 });
 snippet msub
 ${1}.subscribe('${2}'${3});
 snippet mstartup
 Meteor.startup(function () {
-${1}
+  ${1}
 });
 snippet mrh
 Template.registerHelper('${1}', (${2}) => {
-${3}
+  ${3}
 });
 snippet mrd
 FlowRouter.route('${1}', {
-name: '${2}',
-action(params, query) {
-'${3}'
-}
+  name: '${2}',
+  action(params, query) {
+    '${3}'
+  },
 });
 snippet mrg
 FlowRouter.go('${1}');
@@ -66,28 +66,30 @@ snippet mcomm
 /*****************************************************************************/
 snippet mauto
 Tracker.autorun((c) => {
-${1}
+  ${1}
 });
 snippet misc
 if (Meteor.isClient) {
-${1}
+  ${1}
 }
 snippet miss
 if (Meteor.isServer) {
-${1}
+  ${1}
 }
 snippet mmt
 Meteor.methods({
+  ${1}
 });
 snippet mcall
 Meteor.call('${1}', (err) => {
-if (err) {
-showError(err);
-}
-else {
-${2}
-}
+  if (err) {
+    showError(err);
+  } else {
+    ${2}
+  }
 });
+snippet mcalle
+Meteor.call('${1}', controlError);
 snippet mcol
 ${1} = new Mongo.Collection('${2}');
 snippet mi18
@@ -96,18 +98,18 @@ snippet merr
 throw new Meteor.Error('${1}');
 snippet monr
 Template.${1}.onRendered(function() {
-const self = this;
-${2}
+  const self = this;
+  ${2}
 });
 snippet monc
 Template.${1}.onCreated(function() {
-const self = this;
-${2}
+  const self = this;
+  ${2}
 });
 snippet mond
 Template.${1}.onDestroyed(function() {
-const self = this;
-${2}
+  const self = this;
+  ${2}
 });
 snippet mim
 import { ${1} } from '${2}';
@@ -119,7 +121,7 @@ import { ${1} } from '/imports/startup/client/hlp-cli-common.js';
 # For of loop
 snippet forof
 for (let ${1:s} of ${2:sequence}) {
-${3}
+  ${3}
 }
 snippet im
 import ${1:foo} from '${2:bar}'
@@ -133,31 +135,31 @@ snippet cle
 console.log(${1:obj},${2})
 snippet foreach
 ${1:array}.forEach((${2:item}) => {
-${0}
+  ${3}
 })
 snippet forof
 for (let ${1:elem} of ${2:obj}) {
-${0}
+  ${3}
 }
 snippet for
 for (let i = 0 i < ${1:length} i++) {
-${0}
+  ${2}
 }
 snippet if
 if (${1:condition}) {
-${0}
+  ${2}
 }
 snippet ife
 if (${1:condition}) {
-${2}
+  ${2}
 } else {
-${0}
+  ${3}
 }
 snippet ifei
 if (${1:condition}) {
-${2}
+  ${2}
 } else if (${3:condition}) {
-${0}
+  ${4}
 }
 snippet =>
 (${1}) => ${2}
