@@ -81,12 +81,14 @@ Meteor.methods({
   ${1}
 });
 snippet mcall
+Store.dispatch(commonActions.busy(true));
 Meteor.call('${1}', (err) => {
-  if (err) {
-    showError(err);
+  if (objectIsFull(err)) {
+    Store.dispatch(commonActions.error(err));
   } else {
     ${2}
   }
+  Store.dispatch(commonActions.busy(false));
 });
 snippet mcalle
 Meteor.call('${1}', controlError);
