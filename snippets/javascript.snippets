@@ -111,20 +111,22 @@ Template.${1}.onDestroyed(function() {
   const self = this;
   ${2}
 });
-snippet mim
+snippet mig
 import { ${1} } from '${2}';
-snippet mimd
+snippet mid
 import { ${1} } from '/imports/api/definitions.js';
-snippet mimh
-import { ${1} } from '/imports/startup/client/hlp-cli-common.js';
+snippet mic
+import { ${1} } from '/imports/api/client/client-helpers.js';
+snippet mis
+import { Store } from '/imports/api/client/redux.js';
+snippet mim
+import { ${1} } from '/imports/modules/${2}/client/${2}-redux.js';
 
 # For of loop
 snippet forof
 for (let ${1:s} of ${2:sequence}) {
   ${3}
 }
-snippet im
-import ${1:foo} from '${2:bar}'
 snippet ex
 export ${1:default} ${2:bar}
 snippet ce
