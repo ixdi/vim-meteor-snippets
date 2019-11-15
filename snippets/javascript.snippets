@@ -12,12 +12,12 @@ Template.${1:template_name}.events({
   ${2}
 });
 snippet mef
-'${1}'(ev, tpl) {
+'${1}'(ev, tmpl) {
   ev.preventDefault();
   ${2}
 },
 snippet mefd
-'${1}': _.debounce((ev, tpl) => {
+'${1}': _.debounce((ev, tmpl) => {
   ev.preventDefault();
   ${2}
 }, App.Settings.limitEventTime, true),
