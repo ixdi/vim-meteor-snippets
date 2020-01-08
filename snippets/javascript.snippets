@@ -81,14 +81,14 @@ Meteor.methods({
   ${1}
 });
 snippet mcall
-CommonAssistants.busy(true);
+CommonAssistants.setBusy(true);
 Meteor.call('${1}', (err) => {
   if (objectIsFull(err)) {
     CommonAssistants.error(err);
   } else {
     ${2}
   }
-  CommonAssistants.busy(true);
+  CommonAssistants.setBusy(true);
 });
 snippet mcalle
 Meteor.call('${1}', controlError);
@@ -177,3 +177,11 @@ if (${1:condition}) {
 }
 snippet =>
 (${1}) => ${2}
+snippet pro
+new Promise(resolve => {
+  ${1}
+});
+snippet pror
+new Promise((resolve, reject) => {
+  ${1}
+});
