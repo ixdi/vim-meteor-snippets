@@ -81,16 +81,24 @@ Meteor.methods({
   ${1}
 });
 snippet mcall
+Meteor.call('${1}', (err) => {
+  if (isFull(err)) {
+    CommonAssistants.error(err);
+  } else {
+    ${2}
+  }
+});
+snippet mcallb
 CommonAssistants.setBusy(true);
 Meteor.call('${1}', (err) => {
-  if (objectIsFull(err)) {
+  if (isFull(err)) {
     CommonAssistants.error(err);
   } else {
     ${2}
   }
   CommonAssistants.setBusy(false);
 });
-snippet mcalle
+snippet mcallc
 Meteor.call('${1}', controlError);
 snippet mcol
 ${1} = new Mongo.Collection('${2}');
