@@ -17,110 +17,110 @@ snippet mef "Event action (ev, tmpl) { ... }"
     		${2}
   	},
 snippet mefd "Event action debounce"
-  '${1}': _.debounce((ev, tmpl) => {
-    ev.preventDefault();
-    ${2}
-  }, App.Settings.limitEventTime, true),
+	'${1}': _.debounce((ev, tmpl) => {
+		ev.preventDefault();
+		${2}
+	}, App.Settings.limitEventTime, true),
 snippet mtauto "autorun((c) { ... })"
-  self.autorun((c) => {
-    ${1}
-  });
+	self.autorun((c) => {
+		${1}
+	});
 snippet mf "ES6 function definition"
-  self.${1} = (${2}) => {
-    ${3}
-  };
+	self.${1} = (${2}) => {
+		${3}
+	};
 snippet mpub "Meteor publish definition"
-  Meteor.publish('${1}', function () {
-    ${2}
-  });
+	Meteor.publish('${1}', function () {
+		${2}
+	});
 snippet msub "Meteor subscribe definition"
-  ${1}.subscribe('${2}'${3});
+	${1}.subscribe('${2}'${3});
 snippet mstartup
-  Meteor.startup(function () {
-    ${1}
-  });
-  snippet mrh "Blaze register helper global"
-  Template.registerHelper('${1}', (${2}) => {
-    ${3}
-  });
+	Meteor.startup(function () {
+		${1}
+	});
+snippet mrh "Blaze register helper global"
+	Template.registerHelper('${1}', (${2}) => {
+		${3}
+	});
 snippet mrd "Flow Route definition"
-  FlowRouter.route('${1}', {
-    name: '${2}',
-    action(params, query) {
-      '${3}'
-    },
-  });
+	FlowRouter.route('${1}', {
+		name: '${2}',
+		action(params, query) {
+			'${3}'
+		},
+	});
 snippet mfrg "FlowRouter go"
-  FlowRouter.go('${1}');
+	FlowRouter.go('${1}');
 snippet mfrp "FlowRouter getParam"
-  FlowRouter.getParam('${1}');
+	FlowRouter.getParam('${1}');
 snippet msset "Meteor Session set"
-  Session.set('${2:key}', ${3:value})${1}
+	Session.set('${2:key}', ${3:value})${1}
 snippet msget "Meteor Session get"
-  Session.get('${2:key}')${1}
+	Session.get('${2:key}')${1}
 snippet mseq
-  Session.equals('${2:key}', ${3:value})${1}
+	Session.equals('${2:key}', ${3:value})${1}
 snippet mco
-  /**
-   * ${1}
-   */
+	/**
+	* ${1}
+	*/
 snippet mauto
-  Tracker.autorun((c) => {
-    ${1}
-  });
+	Tracker.autorun((c) => {
+		${1}
+	});
 snippet misc
-  if (Meteor.isClient) {
-    ${1}
-  }
+	if (Meteor.isClient) {
+		${1}
+	}
 snippet miss
-  if (Meteor.isServer) {
-    ${1}
-  }
+	if (Meteor.isServer) {
+		${1}
+	}
 snippet mmt
-  Meteor.methods({
-    ${1}
-  });
+	Meteor.methods({
+		${1}
+	});
 snippet mcall
-  Meteor.call('${1}', (err) => {
-    if (isFull(err)) {
-      CommonAssistants.error(err);
-    } else {
-      ${2}
-    }
-  });
+	Meteor.call('${1}', (err) => {
+		if (isFull(err)) {
+			CommonAssistants.error(err);
+		} else {
+			${2}
+		}
+	});
 snippet mcallb
-  CommonAssistants.setBusy(true);
-  Meteor.call('${1}', (err) => {
-    if (isFull(err)) {
-      CommonAssistants.error(err);
-    } else {
-      ${2}
-    }
-    CommonAssistants.setBusy(false);
-  });
+	CommonAssistants.setBusy(true);
+	Meteor.call('${1}', (err) => {
+		if (isFull(err)) {
+			CommonAssistants.error(err);
+		} else {
+			${2}
+		}
+		CommonAssistants.setBusy(false);
+	});
 snippet mcallc
-  Meteor.call('${1}', controlError);
+	Meteor.call('${1}', controlError);
 snippet mcol
-  ${1} = new Mongo.Collection('${2}');
+	${1} = new Mongo.Collection('${2}');
 snippet mi18
-  i18n.__('${1}')
+ 	i18n.__('${1}')
 snippet merr
-  throw new Meteor.Error('${1}');
+	throw new Meteor.Error('${1}');
 snippet monr
-  Template.${1}.onRendered(function() {
-    const self = this;
-    ${2}
-  });
+	Template.${1}.onRendered(function() {
+		const self = this;
+		${2}
+	});
 snippet monc
-  Template.${1}.onCreated(function() {
-    const self = this;
-    ${2}
-  });
+	Template.${1}.onCreated(function() {
+		const self = this;
+		${2}
+	});
 snippet mond
-  Template.${1}.onDestroyed(function() {
-    const self = this;
-    ${2}
-  });
+	Template.${1}.onDestroyed(function() {
+		const self = this;
+		${2}
+	});
 snippet mig
 	import { ${1} } from '${2}';
 snippet mid
@@ -146,55 +146,55 @@ snippet misr
 
 # For of loop
 snippet forof
-  for (let ${1:s} of ${2:sequence}) {
-    ${3}
-  }
+	for (let ${1:s} of ${2:sequence}) {
+		${3}
+	}
 snippet ex
-  export ${1:default} ${2:bar}
+	export ${1:default} ${2:bar}
 snippet ce
-  console.error(${1:obj})
+	console.error(${1:obj})
 snippet cl
-  console.log(${1:obj})
+	console.log(${1:obj})
 snippet cle
-  console.log(${1:obj},${2})
+	console.log(${1:obj},${2})
 snippet foreach
-  ${1:array}.forEach((${2:item}) => {
-    ${3}
-  })
+	${1:array}.forEach((${2:item}) => {
+		${3}
+	})
 snippet forof
-  for (let ${1:elem} of ${2:obj}) {
-    ${3}
-  }
+	for (let ${1:elem} of ${2:obj}) {
+		${3}
+	}
 snippet for
-  for (let i = 0 i < ${1:length} i++) {
-    ${2}
-  }
+	for (let i = 0 i < ${1:length} i++) {
+		${2}
+	}
 snippet if
-  if (${1:condition}) {
-    ${2}
-  }
+	if (${1:condition}) {
+		${2}
+	}
 snippet ife
-  if (${1:condition}) {
-    ${2}
-  } else {
-    ${3}
-  }
+	if (${1:condition}) {
+		${2}
+	} else {
+		${3}
+	}
 snippet ifei
-  if (${1:condition}) {
-    ${2}
-  } else if (${3:condition}) {
-    ${4}
-  }
+	if (${1:condition}) {
+		${2}
+	} else if (${3:condition}) {
+		${4}
+	}
 snippet =>
-  (${1}) => ${2}
+	(${1}) => ${2}
 snippet promr
-  new Promise(resolve => {
-    ${1}
-  });
+	new Promise(resolve => {
+		${1}
+	});
 snippet prom
-  new Promise((resolve, reject) => {
-    ${1}
-  });
+	new Promise((resolve, reject) => {
+		${1}
+	});
 
 # Mocha testing
 snippet des "describe('thing', () => { ... })"
