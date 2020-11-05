@@ -25,7 +25,7 @@ snippet mtauto "autorun((c) { ... })"
 	self.autorun((c) => {
 		${1}
 	});
-snippet mf "ES6 function definition"
+snippet mff "ES6 function definition"
 	self.${1} = (${2}) => {
 		${3}
 	};
@@ -185,7 +185,11 @@ snippet ifei
 	} else if (${3:condition}) {
 		${4}
 	}
-snippet =>
+snippet mf
+	const ${1} = (${2}) => {
+		${3}
+	}
+snippet mfs
 	(${1}) => ${2}
 snippet promr
 	new Promise(resolve => {
